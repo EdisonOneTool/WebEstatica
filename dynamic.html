@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>Dynamic HTML Page</title>
+    <link rel="stylesheet" href="styles/dynamic.css" type="text/css">
+</head>
+<body>
+    <div class="mainbar">
+        <ul> <!-- BARRA DE OPCIONES -->
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="apis.html">APIs</a></li>
+            <li><a href="qualtrics.html">Qualtrics</a></li>
+            <li><a class="active" href="dynamic.html">Web dinamica</a></li>
+        </ul>
+    </div>
+    <div class="main_content"> <!-- CONTENIDO PRINCIPAL-->
+        <div class="coverPage">
+            <div id="cover">
+                <h3>Hola <span id="userNameText"></span>! Este es el sitio web dinamico de Edison</h3>
+            </div>
+        </div>
+        <div id="userNameEntry">
+            <p style="width: 80vw;text-align: left;">Introduzca su nombre para verlo reflejado en el cuadro de arriba</p>
+            Mi nombre es: <input type="text" name="userNameField" id="userNameField"/>
+            <input id="uBtn" type="button" value="cambiar!" onclick="changeUsername()">
+        </div>
+        <p style="width: 80vw;text-align: left;">Utilice los botones para cambiar el color de fondo del cuadro de arriba.</p>
+        <div class="changeBg">
+            <input id="cBtn" type="button" value="claro" onclick="bgL()">
+            <input id="cBtn" type="button" value="oscuro" onclick="bgD()">
+        </div>
+    </div>
+    <script src="scripts/dynamic.js"></script>
+</body>
+</html>
