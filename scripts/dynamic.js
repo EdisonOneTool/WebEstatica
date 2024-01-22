@@ -30,4 +30,5 @@ changeUsername=()=> {
         // Limpiar el campo de texto después de agregar a la lista
         document.getElementById("userNameField").value = "";
     }
+    QSI.API.run();
 }
