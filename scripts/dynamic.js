@@ -1,3 +1,11 @@
+function interceptLoaded() {
+    if (QSI.API) {
+      hasInterceptLoaded=true;
+    } else {
+      hasInterceptLoaded=false;
+    }
+    alert(hasInterceptLoaded)
+}
 bgL=()=>{   document.getElementById("cover").style.backgroundColor="rgba(112, 112, 112, 0.616)"
 }
 bgD=()=>{   document.getElementById("cover").style.backgroundColor="#0a0a0a"
@@ -30,5 +38,8 @@ changeUsername=()=> {
         // Limpiar el campo de texto después de agregar a la lista
         document.getElementById("userNameField").value = "";
     }
-    QSI.API.run();
+    if (hasInterceptLoaded && username === "Matias") {
+        QSI.API.run();
+    }
 }
+

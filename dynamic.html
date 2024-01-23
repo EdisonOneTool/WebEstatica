@@ -2,10 +2,8 @@
 <head>
     <title>Edison | Web dinamica</title>
     <link rel="stylesheet" href="styles/dynamic.css" type="text/css">
-</head>
-<body>
     <!--BEGIN QUALTRICS WEBSITE FEEDBACK SNIPPET-->
-
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script type='text/javascript'>
 
         (function(){var g=function(e,h,f,g){
@@ -25,6 +23,12 @@
         </script><div id='ZN_0IgXd8JLFUk2Pvo'><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>
         
         <!--END WEBSITE FEEDBACK SNIPPET-->
+    <script src="scripts/dynamic.js"></script>
+    <script type="text/javascript">
+        window.addEventListener("qsi_js_loaded", interceptLoaded, false);
+    </script>
+</head>
+<body>
     <div class="mainbar">
         <ul> <!-- BARRA DE OPCIONES -->
             <li><a href="index.html">Inicio</a></li>
@@ -48,6 +52,10 @@
         <div class="changeBg">
             <input id="cBtn" type="button" value="claro" onclick="bgL()">
             <input id="cBtn" type="button" value="oscuro" onclick="bgD()">
+            <input id="cBtn" type="button" value="disparar evento" onclick="window._qsie = window._qsie || [];window._qsie.push('eventoCambioNombre');">
+            <input id="cBtn" type="button" value="verificar intercepto cargado" onclick="verifyInterceptLoaded()">
+
+
         </div>
         <div id="listOfElementsAdded">
             <p style="width: 80vw;text-align: left;">Esta es la lista de elementos que fueron agregados: </p>
@@ -61,6 +69,5 @@
             </div>
         </div>
     </div>
-    <script src="scripts/dynamic.js"></script>
 </body>
 </html>
